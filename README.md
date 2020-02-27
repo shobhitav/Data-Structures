@@ -45,7 +45,7 @@ Stretch Goals:
    * `delete` takes a reference to a node in the list and removes it from the list. The deleted node's `previous` and `next` pointers should point to each afterwards.
    * `get_max` returns the maximum value in the list. 
  * The `head` property is a reference to the first node and the `tail` property is a reference to the last node.
- 
+  
 ![Image of Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/610px-Doubly-linked-list.svg.png)
 
 ### Binary Search Trees
