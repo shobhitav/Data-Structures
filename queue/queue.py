@@ -14,11 +14,10 @@ Stretch: What if you could only use instances of your Stack class to implement t
          What would that look like? How many Stacks would you need? Try it!
 """
 
-
 #  array vs DLL
 # array: add to back O(1)
 # array: add to front O(n)
-# array: delete from back O(n)
+# array: delete from back O(1)
 # array:  delete from front O(n)
 # array: join text buffers together O(n)
 
@@ -35,7 +34,6 @@ from doubly_linked_list import DoublyLinkedList
 
 class Queue:
     def __init__(self):
-        self.size = 0
         self.storage = DoublyLinkedList()
     
     def __len__(self):
@@ -45,5 +43,5 @@ class Queue:
         return self.storage.add_to_tail(value)
 
     def dequeue(self):
-        return self.storage.remove_from_head()
+        return None if self.storage.length == 0 else self.storage.remove_from_head()
         
