@@ -26,7 +26,7 @@ class LRUCache:
     """
     def get(self, key):
         if key not in self.dict:
-            return None
+             return None
          
 
         node = self.dll.head
@@ -36,8 +36,9 @@ class LRUCache:
                 break
             node=node.next
 
-        return self.dict[key]     
-
+        return self.dict[key]  
+        
+        
     """
     Adds the given key-value pair to the cache. The newly-
     added pair should be considered the most-recently used
@@ -58,7 +59,7 @@ class LRUCache:
             node=self.dll.head
             while node is not None:
                 # check key equality
-                if key== node.value[0]:
+                if key  == node.value[0]:
                     #  and the updated value
                     node.value[1]=val
                     # move to head of dll
@@ -68,7 +69,7 @@ class LRUCache:
         # if key is not in dict
         else:
 
-            # handle case when we are already full
+            # handle case when we are already full   
             if self.current_nodes == self.max_nodes:
                 # delete the least recently used value ie tail
                 node=self.dll.tail
@@ -82,6 +83,7 @@ class LRUCache:
             self.dict[key]=val
             self.dll.add_to_head([key,val])
             self.current_nodes+=1 
+
         
             
 
